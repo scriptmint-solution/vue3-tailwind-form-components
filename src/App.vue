@@ -13,6 +13,15 @@
 
         {{form.sampleInput}}
       </div>
+      <div class="mt-4">
+        <BaseTextarea
+          name="sampleTexarea"
+          v-model="form.sampleTextarea"
+          label="Sample Textarea"
+        />
+
+        <div v-html="form.sampleTextarea"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -20,8 +29,10 @@
 <script setup>
 import { reactive } from "vue"
 import BaseInput from "./components/BaseInput.vue"
+import BaseTextarea from "./components/BaseTextarea.vue";
 
 const form = reactive({
-  sampleInput: ''
+  sampleInput: '',
+  sampleTextarea: ''
 })
 </script>
