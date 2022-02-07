@@ -1,6 +1,14 @@
 <template>
-  <div class="flex justify-center h-screen bg-gray-200 dark:bg-gray-800">
-    <div class="my-6 space-y-4 w-1/2">
+  <div class="fixed flex items-center justify-center inset-0 z-40 h-16 bg-black">
+      <div class="text-white text-center px-10 py-2">
+          <a href="https://scriptmint.com/vana-admin" target="_blank" class="">
+              <span class="bg-red-600 px-4 py-1 rounded-full">Pro Version</span>
+              Checkout our Advanced Feature Admin Template built with Laravel, Vue.js 3 & Tailwind CSS 3 here.
+          </a>
+      </div>
+  </div>
+  <div class="flex justify-center h-screen mt-16 bg-gray-200 dark:bg-gray-800">
+    <div class="my-6 space-y-4 sm:w-1/2">
       <div class="flex justify-center">
         <img src="/images/icon.png" class="h-16" />
       </div>
