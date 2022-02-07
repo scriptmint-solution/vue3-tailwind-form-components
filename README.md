@@ -49,7 +49,7 @@ GitHub Repo: https://github.com/scriptmint-solution/vue3-tailwind-form-component
 <em>Coming Soon</em>
 
 ```
-git clone git@github.com:scriptmint-solution/vue3-form-components.git form-components
+git clone git@github.com:scriptmint-solution/vue3-tailwind-form-components.git form-components
 cd form-components
 npm install
 npm run dev
