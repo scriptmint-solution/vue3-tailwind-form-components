@@ -5,7 +5,7 @@ import viteCompression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/vue3-tailwind-form-components/',
   resolve:{
     alias:{
       '@' : path.resolve(__dirname, './src'),
