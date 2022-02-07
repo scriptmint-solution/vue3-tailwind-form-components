@@ -8,7 +8,7 @@
       </div>
   </div>
   <div class="flex justify-center h-screen mt-16 bg-gray-200 dark:bg-gray-800">
-    <div class="my-6 space-y-4 sm:w-1/2">
+    <div class="my-6 space-y-4 sm:w-3/4 lg:w-1/2 w-full px-4">
       <div class="flex justify-center">
         <img src="/images/icon.png" class="h-16" />
       </div>
