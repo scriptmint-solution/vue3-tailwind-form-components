@@ -1,8 +1,6 @@
 <template>
     <div>
-        <label :for="state.uniqueId" v-if="label" class="block text-sm font-medium text-label truncate">
-            {{ label }}
-        </label>
+        <BaseLabel :for="state.uniqueId" v-if="label">{{label}}</BaseLabel>
         <div class="mt-1">
             <textarea
                 :id="state.uniqueId"

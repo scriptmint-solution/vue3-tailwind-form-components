@@ -1,18 +1,23 @@
 <template>
     <div>
-        <label :for="state.uniqueId" v-if="label" class="block text-sm font-medium text-label truncate">
-            {{ label }}
-        </label>
+        <BaseLabel :for="state.uniqueId" v-if="label">{{label}}</BaseLabel>
         <div class="mt-1">
             <input
                 :id="state.uniqueId"
                 v-bind="$attrs"
                 :placeholder="placeholder || label"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                :class="{
+                    'border-2 border-red-600': error,
+                    'border-2 border-green-600': success,
+                    'border-2 border-blue-600': info,
+                    'border-2 border-yellow-600': warning,
+                }"
                 :value="modelValue"
                 @input="updateInput"
             />
         </div>
+        <FormError>{{error}}</FormError>
     </div>
 </template>
 
@@ -39,6 +44,13 @@ const props = defineProps({
         type: [String, Number],
         default: ''
     },
+    error: {
+        type: String,
+        default: ''
+    },
+    success: Boolean,
+    info: Boolean,
+    warning: Boolean,
 })
 
 const emit = defineEmits(['update:modelValue'])
