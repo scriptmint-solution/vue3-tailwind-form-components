@@ -74,10 +74,37 @@
         <ShowInput>{{form.sampleTextarea}}</ShowInput>
       </div>
 
-      <div class="mt-4">
-          <p class="text-center text-sm text-gray-900 dark:text-gray-400 space-x-2">
-              <span>Version 1.0.0 Designed with ❤️ by <a href="https://scriptmint.com">ScriptMint</a></span>
-          </p>
+      <div class="space-y-4">
+        <BaseCheckbox
+          name="sampleCheckbox"
+          v-model="form.sampleCheckbox"
+          label="Sample Checkbox"
+          error="You should accept the terms!"
+        />
+        <BaseCheckbox
+          name="sampleSuccessCheckbox"
+          v-model="form.sampleSuccessCheckbox"
+          label="Sample Success Checkbox"
+          success
+        />
+        <BaseCheckbox
+          name="sampleErrorCheckbox"
+          v-model="form.sampleErrorCheckbox"
+          label="Sample Error Checkbox"
+          error
+        />
+        <BaseCheckbox
+          name="sampleInfoCheckbox"
+          v-model="form.sampleInfoCheckbox"
+          label="Sample Info Checkbox"
+          info
+        />
+        <BaseCheckbox
+          name="sampleWarningCheckbox"
+          v-model="form.sampleWarningCheckbox"
+          label="Sample Warning Checkbox"
+          warning
+        />
       </div>
     </div>
   </div>
@@ -92,6 +119,11 @@ const form = reactive({
   sampleSuccessInput: '',
   sampleInfoInput: '',
   sampleWarningInput: '',
-  sampleTextarea: ''
+  sampleTextarea: '',
+  sampleCheckbox: false,
+  sampleSuccessCheckbox: true,
+  sampleErrorCheckbox: false,
+  sampleInfoCheckbox: true,
+  sampleWarningCheckbox: false,
 })
 </script>

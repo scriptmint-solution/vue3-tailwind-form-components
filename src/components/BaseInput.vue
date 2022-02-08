@@ -11,7 +11,7 @@
                     'border-2 border-red-600': error,
                     'border-2 border-green-600': success,
                     'border-2 border-blue-600': info,
-                    'border-2 border-yellow-600': warning,
+                    'border-2 border-yellow-400': warning,
                 }"
                 :value="modelValue"
                 @input="updateInput"

@@ -27,11 +27,21 @@ GitHub Repo: https://github.com/scriptmint-solution/vue3-tailwind-form-component
 
 #### Base Textarea
 ```
-<BaseTextarea name="address" v-model="addres" lable="Sample Textarea" />
+<BaseTextarea name="address" v-model="address" lable="Sample Textarea" />
 ```
 
 #### Base Checkbox
-<em>Coming Soon</em>
+```
+<BaseCheckbox name="terms" v-model="terms" label="Sample Checkbox" />
+
+<BaseCheckbox name="terms" v-model="terms" label="Sample Checkbox" success />
+
+<BaseCheckbox name="terms" v-model="terms" label="Sample Checkbox" danger />
+
+<BaseCheckbox name="terms" v-model="terms" label="Sample Checkbox" info />
+
+<BaseCheckbox name="terms" v-model="terms" label="Sample Checkbox" warning />
+```
 
 #### Base Radio
 <em>Coming Soon</em>
