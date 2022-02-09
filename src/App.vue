@@ -66,37 +66,61 @@
         <ShowInput>{{form.sampleTextarea}}</ShowInput>
       </div>
 
-      <div class="space-y-4">
-        <BaseCheckbox
-          name="sampleCheckbox"
-          v-model="form.sampleCheckbox"
-          label="Sample Checkbox"
-          error="You should accept the terms!"
-        />
-        <BaseCheckbox
-          name="sampleSuccessCheckbox"
-          v-model="form.sampleSuccessCheckbox"
-          label="Sample Success Checkbox"
-          success
-        />
-        <BaseCheckbox
-          name="sampleErrorCheckbox"
-          v-model="form.sampleErrorCheckbox"
-          label="Sample Error Checkbox"
-          error
-        />
-        <BaseCheckbox
-          name="sampleInfoCheckbox"
-          v-model="form.sampleInfoCheckbox"
-          label="Sample Info Checkbox"
-          info
-        />
-        <BaseCheckbox
-          name="sampleWarningCheckbox"
-          v-model="form.sampleWarningCheckbox"
-          label="Sample Warning Checkbox"
-          warning
-        />
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-2 sm:col-span-1">
+          <div class="space-y-4">
+            <BaseCheckbox
+              name="sampleCheckbox"
+              v-model="form.sampleCheckbox"
+              label="Sample Checkbox"
+              error="You should accept the terms!"
+            />
+            <BaseCheckbox
+              name="sampleSuccessCheckbox"
+              v-model="form.sampleSuccessCheckbox"
+              label="Sample Success Checkbox"
+              success
+            />
+            <BaseCheckbox
+              name="sampleErrorCheckbox"
+              v-model="form.sampleErrorCheckbox"
+              label="Sample Error Checkbox"
+              error
+            />
+            <BaseCheckbox
+              name="sampleInfoCheckbox"
+              v-model="form.sampleInfoCheckbox"
+              label="Sample Info Checkbox"
+              info
+            />
+            <BaseCheckbox
+              name="sampleWarningCheckbox"
+              v-model="form.sampleWarningCheckbox"
+              label="Sample Warning Checkbox"
+              warning
+            />
+          </div>
+        </div>
+        <div class="col-span-2 sm:col-span-1">
+          <div class="space-y-4">
+            <BaseRadioGroup
+                :options="[
+                    {label: 'Option 1', value: 'option1'},
+                    {label: 'Option 2', value: 'option2'},
+                ]"
+                name="option"
+                v-model="form.sampleRadio"
+            />
+            <BaseRadioGroup
+                :options="[
+                    {label: 'Option 1', value: 'option1'},
+                    {label: 'Option 2', value: 'option2'},
+                ]"
+                name="preSelectedOption"
+                v-model="form.samplePreSelectedRadio"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -117,5 +141,7 @@ const form = reactive({
   sampleErrorCheckbox: false,
   sampleInfoCheckbox: true,
   sampleWarningCheckbox: false,
+  sampleRadio: '',
+  samplePreSelectedRadio: 'option2'
 })
 </script>
